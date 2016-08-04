@@ -5,6 +5,14 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RCMS", "RCMS\RCMS.csproj", "{88122C6A-0AEF-4B68-A964-0F01168330E2}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RCMS.UI", "RCMS.UI", "{C51B609A-7E25-4BB2-8C08-611985303A1F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RCMS.Domain", "RCMS.Domain", "{C98F9A80-40D1-4E2D-93B5-16CC1A78BF19}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RCMS.ApiService", "RCMS.ApiService", "{C9AE3B62-08FA-4E1F-A37F-901CF50848CA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RCMS.ZTest", "RCMS.ZTest", "{79E034CE-ED84-409F-BD10-B2E6C4ED0EAB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +26,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{88122C6A-0AEF-4B68-A964-0F01168330E2} = {C51B609A-7E25-4BB2-8C08-611985303A1F}
 	EndGlobalSection
 EndGlobal
