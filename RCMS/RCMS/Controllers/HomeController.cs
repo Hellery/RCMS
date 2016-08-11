@@ -13,5 +13,10 @@ namespace RCMS.Controllers
         {
             return View();
         }
+
+        public ActionResult DashBoard()
+        {
+            return View();
+        }
     }
 }
