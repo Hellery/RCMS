@@ -7,9 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RCMS.Center
+namespace RCMS.Center.DataAccess
 {
-    class T_ProductCategoryDataAccess : DataAccessGeneric<T_ProductCategory>
+    public class T_ProductCategoryDataAccess : DataAccessGeneric<T_ProductCategory>
     {
         public T_ProductCategoryDataAccess(String sqlMapConfigPath = "SqlMap.config")
     : base(sqlMapConfigPath)
