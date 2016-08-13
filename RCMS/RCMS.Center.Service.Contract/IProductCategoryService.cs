@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace RCMS.Center.Service.Contract
 {
-    public class Class1
+    public interface IProductCategoryService
     {
+        
     }
 }
