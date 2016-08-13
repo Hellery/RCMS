@@ -30,6 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Rocher.Infrastructure.MyBatis">
+      <HintPath>..\Extend-Bin\Rocher.MyIBatis\Rocher.Infrastructure.MyBatis.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -41,6 +44,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="T_ProductCategoryDataAccess.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RCMS.Center.Entity\RCMS.Center.Entity.csproj">
+      <Project>{D97B242D-C195-436A-A703-490E46E4CE7A}</Project>
+      <Name>RCMS.Center.Entity</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

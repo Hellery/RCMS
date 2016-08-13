@@ -76,6 +76,9 @@
       <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Rocher.Infrastructure.MyBatis">
+      <HintPath>..\Extend-Bin\Rocher.MyIBatis\Rocher.Infrastructure.MyBatis.dll</HintPath>
+    </Reference>
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Web.DynamicData" />
@@ -131,6 +134,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="..\PublicConfig\SqlMaps\T_ProductCategory.xml">
+      <Link>SqlMaps\T_ProductCategory.xml</Link>
+    </Content>
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
@@ -192,6 +198,8 @@
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\CollectionModelDescription.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
+    <Content Include="providers.config" />
+    <Content Include="SqlMap.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
