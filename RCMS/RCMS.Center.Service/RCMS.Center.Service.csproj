@@ -76,6 +76,10 @@
       <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="RFramework.Message, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RFramework.Message.1.0.0.0\lib\net45\RFramework.Message.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Rocher.Infrastructure.MyBatis">
       <HintPath>..\Extend-Bin\Rocher.MyIBatis\Rocher.Infrastructure.MyBatis.dll</HintPath>
     </Reference>
@@ -213,9 +217,21 @@
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\RCMS.Center.Domain\RCMS.Center.DomainService.csproj">
+      <Project>{B99DA986-AA03-4604-97B3-E092D3809638}</Project>
+      <Name>RCMS.Center.DomainService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RCMS.Center.Entity\RCMS.Center.Entity.csproj">
+      <Project>{d97b242d-c195-436a-a703-490e46e4ce7a}</Project>
+      <Name>RCMS.Center.Entity</Name>
+    </ProjectReference>
     <ProjectReference Include="..\RCMS.Center.Service.Contract\RCMS.Center.Service.Contract.csproj">
       <Project>{2B00F253-6173-41DF-8420-894CFB047494}</Project>
       <Name>RCMS.Center.Service.Contract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RCMS.Center.Service.Message\RCMS.Center.Service.Message.csproj">
+      <Project>{17e9a912-f417-45c0-b79a-95d4cc9d604a}</Project>
+      <Name>RCMS.Center.Service.Message</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
