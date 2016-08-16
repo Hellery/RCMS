@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RCMS.Public.Service.Contract
+namespace RCMS.Public.DataAccess
 {
-    public class Class1
+    public class T_AppDataAccess
     {
     }
 }

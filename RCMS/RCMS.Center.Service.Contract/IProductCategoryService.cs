@@ -11,6 +11,6 @@ namespace RCMS.Center.Service.Contract
     public interface IProductCategoryService
     {
          // Here Need:  Install-Package RFramework.Message
-        ResponseMessageWrap<GetAllResponse> GetAll();
+        ResponseMessageWrap<GetAllResponse> GetAll(NoneRequest reqMsg);
     }
 }

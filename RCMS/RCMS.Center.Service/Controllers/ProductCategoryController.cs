@@ -8,13 +8,16 @@ using System.Web.Http;
 using RCMS.Center.Service.Message.Response.ProductCategory;
 using RFramework.Message;
 using RCMS.Center.DomainService;
+using System.Web.Http.Cors;
 
 namespace RCMS.Center.Service.Controllers
 {
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class ProductCategoryController : ApiController, IProductCategoryService
     {
         private static readonly ProductCategoryService service = new ProductCategoryService();
-        public ResponseMessageWrap<GetAllResponse> GetAll()
+        [HttpPost]
+        public ResponseMessageWrap<GetAllResponse> GetAll(NoneRequest reqMsg)
         {
             var categoryList = service.GetAll();
             return new ResponseMessageWrap<GetAllResponse>
