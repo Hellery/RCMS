@@ -76,8 +76,8 @@
       <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="RFramework.Message, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\RFramework.Message.1.0.1.0\lib\net45\RFramework.Message.dll</HintPath>
+    <Reference Include="RFramework.Message, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RFramework.Message.1.0.2.0\lib\net45\RFramework.Message.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Net.Http" />
@@ -178,6 +178,7 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="Controllers\AuthorizeController.cs" />
     <Compile Include="Controllers\ConfigInfoController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -222,6 +223,10 @@
     <ProjectReference Include="..\RCMS.Infrastruture.Utilities\RCMS.Infrastruture.Utilities.csproj">
       <Project>{0136A0DB-30F8-40DE-9BA4-B9A97115F388}</Project>
       <Name>RCMS.Infrastruture.Utilities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RCMS.Public.DomainService\RCMS.Public.DomainService.csproj">
+      <Project>{0427F662-A896-49EC-9D19-694E87F5F638}</Project>
+      <Name>RCMS.Public.DomainService</Name>
     </ProjectReference>
     <ProjectReference Include="..\RCMS.Public.Service.Contract\RCMS.Public.Service.Contract.csproj">
       <Project>{201357FC-DF37-483C-A277-98977B5C4ACB}</Project>

@@ -183,7 +183,6 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
-    <Compile Include="Controllers\AuthorizeController.cs" />
     <Compile Include="Controllers\ProductCategoryController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -243,10 +242,6 @@
     <ProjectReference Include="..\RCMS.Center.Service.Message\RCMS.Center.Service.Message.csproj">
       <Project>{17e9a912-f417-45c0-b79a-95d4cc9d604a}</Project>
       <Name>RCMS.Center.Service.Message</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\RCMS.Public.DomainService\RCMS.Public.DomainService.csproj">
-      <Project>{0427F662-A896-49EC-9D19-694E87F5F638}</Project>
-      <Name>RCMS.Public.DomainService</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
