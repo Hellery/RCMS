@@ -143,6 +143,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="..\PublicConfig\SqlMaps\T_App.xml">
+      <Link>SqlMaps\T_App.xml</Link>
+    </Content>
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Config\Services.xml" />
     <Content Include="Global.asax" />
@@ -208,6 +211,8 @@
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
     <None Include="Properties\PublishProfiles\Release.pubxml" />
+    <Content Include="SqlMap.config" />
+    <Content Include="providers.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
