@@ -10,13 +10,17 @@ namespace RCMS.Public.Service
         public static void Register(HttpConfiguration config)
         {
             // Web API 配置和服务
+           // config.RemoveXmlFormatter();
+            //config.EnableCors();
+
+            // Web API 配置和服务
 
             // Web API 路由
             config.MapHttpAttributeRoutes();
 
             config.Routes.MapHttpRoute(
-                name: "DefaultApi",
-                routeTemplate: "api/{controller}/{id}",
+                name: "ServiceApi",
+                routeTemplate: "{controller}/{action}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
         }

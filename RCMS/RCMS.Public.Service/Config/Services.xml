@@ -19,11 +19,13 @@
       </Controllers>
     </Service>
     <Service Code="T" Name="Center" Host="http://localhost:9001" Description="交易中心服务">
-      <Controller Code="PC" Name="ProductCategory" Description="产品分类">
-        <Actions>
-          <Action Code="GetAll" Name="GetAll" Description="获取所有产品分类信息"/>
-        </Actions>
-      </Controller>
+      <Controllers>
+        <Controller Code="PC" Name="ProductCategory" Description="产品分类">
+          <Actions>
+            <Action Code="GetAll" Name="GetAll" Description="获取所有产品分类信息"/>
+          </Actions>
+        </Controller>
+      </Controllers>
     </Service>
   </Services>
 </ServiceConfig>
