@@ -76,6 +76,10 @@
       <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.4.3.7\lib\net45\NLog.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="RFramework.Message, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\RFramework.Message.1.0.2.0\lib\net45\RFramework.Message.dll</HintPath>
       <Private>True</Private>
@@ -147,6 +151,7 @@
       <Link>SqlMaps\T_App.xml</Link>
     </Content>
     <Content Include="Areas\HelpPage\HelpPage.css" />
+    <Content Include="Config\Provider.xml" />
     <Content Include="Config\Services.xml" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
@@ -210,6 +215,7 @@
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\CollectionModelDescription.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
+    <Content Include="NLog.config" />
     <None Include="Properties\PublishProfiles\Release.pubxml" />
     <Content Include="SqlMap.config" />
     <Content Include="providers.config" />

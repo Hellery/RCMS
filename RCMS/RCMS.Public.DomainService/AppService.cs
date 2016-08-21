@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace RCMS.Public.DomainService
 {
-    public class AppService// : DomainServiceBase
+    public class AppService : DomainServiceBase
     {
         private static readonly T_AppDataAccess dao = new T_AppDataAccess();
         /// <summary>
