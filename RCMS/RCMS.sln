@@ -63,6 +63,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Client SDK", "Client SDK", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RFramework.ServiceClient", "..\..\RFramework-1\RFramework\RFramework.ServiceClient\RFramework.ServiceClient.csproj", "{3430B7E8-F258-4460-9CFB-A37147349825}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RFramework.Infrastructure.Const", "RFramework.Infrastructure.Const\RFramework.Infrastructure.Const.csproj", "{905C9DD5-2D93-476E-B6A5-6B4B7BE33920}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RFramework.Infrastructure.RException", "RFramework.Infrastructure.RException\RFramework.Infrastructure.RException.csproj", "{BF81AB6A-C91D-4E35-8D14-4641345C0F12}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -133,6 +137,14 @@ Global
 		{3430B7E8-F258-4460-9CFB-A37147349825}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3430B7E8-F258-4460-9CFB-A37147349825}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3430B7E8-F258-4460-9CFB-A37147349825}.Release|Any CPU.Build.0 = Release|Any CPU
+		{905C9DD5-2D93-476E-B6A5-6B4B7BE33920}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{905C9DD5-2D93-476E-B6A5-6B4B7BE33920}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{905C9DD5-2D93-476E-B6A5-6B4B7BE33920}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{905C9DD5-2D93-476E-B6A5-6B4B7BE33920}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF81AB6A-C91D-4E35-8D14-4641345C0F12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF81AB6A-C91D-4E35-8D14-4641345C0F12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF81AB6A-C91D-4E35-8D14-4641345C0F12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF81AB6A-C91D-4E35-8D14-4641345C0F12}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -160,5 +172,7 @@ Global
 		{8B33C2A0-7231-4441-B039-1624E50AC012} = {8D0D6B7F-1931-46B7-A873-E9E000DC43CD}
 		{724C5B4E-065F-4427-B7EC-5837FEA417C3} = {8D0D6B7F-1931-46B7-A873-E9E000DC43CD}
 		{3430B7E8-F258-4460-9CFB-A37147349825} = {CCFDA7E5-F0DB-4D56-94CF-7C2A84593D69}
+		{905C9DD5-2D93-476E-B6A5-6B4B7BE33920} = {DFCE06B1-F3F5-4B9E-849B-D26BDC7B16F6}
+		{BF81AB6A-C91D-4E35-8D14-4641345C0F12} = {DFCE06B1-F3F5-4B9E-849B-D26BDC7B16F6}
 	EndGlobalSection
 EndGlobal

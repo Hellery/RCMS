@@ -69,6 +69,18 @@
       <Project>{8B33C2A0-7231-4441-B039-1624E50AC012}</Project>
       <Name>RCMS.Public.DataAccess</Name>
     </ProjectReference>
+    <ProjectReference Include="..\RCMS.Public.Entity\RCMS.Public.Entity.csproj">
+      <Project>{724C5B4E-065F-4427-B7EC-5837FEA417C3}</Project>
+      <Name>RCMS.Public.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RFramework.Infrastructure.Const\RFramework.Infrastructure.Const.csproj">
+      <Project>{905C9DD5-2D93-476E-B6A5-6B4B7BE33920}</Project>
+      <Name>RFramework.Infrastructure.Const</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RFramework.Infrastructure.RException\RFramework.Infrastructure.RException.csproj">
+      <Project>{BF81AB6A-C91D-4E35-8D14-4641345C0F12}</Project>
+      <Name>RFramework.Infrastructure.RException</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
