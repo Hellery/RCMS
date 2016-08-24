@@ -47,20 +47,12 @@
       <HintPath>..\packages\Castle.Core.3.3.3\lib\net45\Castle.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="IBatisNet.Common, Version=1.6.2.0, Culture=neutral, PublicKeyToken=ed781d9fc396c6ca, processorArchitecture=MSIL">
-      <HintPath>..\packages\IBatisNet45.1.6.2\lib\net45\IBatisNet.Common.dll</HintPath>
+    <Reference Include="IBatisNet.Common, Version=1.6.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MyBatis.NET.1.6.4\lib\IBatisNet.Common.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="IBatisNet.Common.Logging.Log4Net, Version=1.6.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\IBatisNet45.1.6.2\lib\net45\IBatisNet.Common.Logging.Log4Net.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="IBatisNet.DataMapper, Version=1.6.2.0, Culture=neutral, PublicKeyToken=ed781d9fc396c6ca, processorArchitecture=MSIL">
-      <HintPath>..\packages\IBatisNet45.1.6.2\lib\net45\IBatisNet.DataMapper.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="log4net, Version=1.2.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
-      <HintPath>..\packages\log4net.2.0.5\lib\net45-full\log4net.dll</HintPath>
+    <Reference Include="IBatisNet.DataMapper, Version=1.6.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MyBatis.NET.1.6.4\lib\IBatisNet.DataMapper.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -80,8 +72,20 @@
       <HintPath>..\packages\NLog.4.3.7\lib\net45\NLog.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="RFramework.Cache, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RFramework.Cache.1.0.0.0\lib\net452\RFramework.Cache.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="RFramework.Message, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\RFramework.Message.1.0.2.0\lib\net45\RFramework.Message.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="RFramework.Provider, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RFramework.Provider.1.0.0.0\lib\net452\RFramework.Provider.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="StackExchange.Redis, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\StackExchange.Redis.1.1.603\lib\net45\StackExchange.Redis.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Net.Http" />
@@ -151,9 +155,12 @@
       <Link>SqlMaps\T_App.xml</Link>
     </Content>
     <Content Include="Areas\HelpPage\HelpPage.css" />
-    <Content Include="Config\Provider.xml" />
+    <Content Include="Config\Provider.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Config\Services.xml" />
     <Content Include="Global.asax" />
+    <Content Include="Provider.xml" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -242,6 +249,10 @@
     <ProjectReference Include="..\RCMS.Public.Service.Contract\RCMS.Public.Service.Contract.csproj">
       <Project>{201357FC-DF37-483C-A277-98977B5C4ACB}</Project>
       <Name>RCMS.Public.Service.Contract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RFramework.WebApi\RFramework.WebApi.csproj">
+      <Project>{6fd0c4d1-b63c-4697-877d-1609c5c23faa}</Project>
+      <Name>RFramework.WebApi</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

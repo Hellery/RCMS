@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RFramework.WebApi;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
@@ -10,7 +11,8 @@ namespace RCMS.Center.Service
         public static void Register(HttpConfiguration config)
         {
             // Web API 配置和服务
-
+            config.RemoveXmlFormatter();
+            config.EnableCors();
             // Web API 路由
             config.MapHttpAttributeRoutes();
 

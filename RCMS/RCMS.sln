@@ -67,6 +67,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RFramework.Infrastructure.C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RFramework.Infrastructure.RException", "RFramework.Infrastructure.RException\RFramework.Infrastructure.RException.csproj", "{BF81AB6A-C91D-4E35-8D14-4641345C0F12}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RFramework.WebApi", "RFramework.WebApi\RFramework.WebApi.csproj", "{6FD0C4D1-B63C-4697-877D-1609C5C23FAA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -145,6 +147,10 @@ Global
 		{BF81AB6A-C91D-4E35-8D14-4641345C0F12}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BF81AB6A-C91D-4E35-8D14-4641345C0F12}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BF81AB6A-C91D-4E35-8D14-4641345C0F12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FD0C4D1-B63C-4697-877D-1609C5C23FAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FD0C4D1-B63C-4697-877D-1609C5C23FAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FD0C4D1-B63C-4697-877D-1609C5C23FAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FD0C4D1-B63C-4697-877D-1609C5C23FAA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -174,5 +180,6 @@ Global
 		{3430B7E8-F258-4460-9CFB-A37147349825} = {CCFDA7E5-F0DB-4D56-94CF-7C2A84593D69}
 		{905C9DD5-2D93-476E-B6A5-6B4B7BE33920} = {DFCE06B1-F3F5-4B9E-849B-D26BDC7B16F6}
 		{BF81AB6A-C91D-4E35-8D14-4641345C0F12} = {DFCE06B1-F3F5-4B9E-849B-D26BDC7B16F6}
+		{6FD0C4D1-B63C-4697-877D-1609C5C23FAA} = {DFCE06B1-F3F5-4B9E-849B-D26BDC7B16F6}
 	EndGlobalSection
 EndGlobal

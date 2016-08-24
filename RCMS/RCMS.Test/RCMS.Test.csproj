@@ -36,16 +36,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Castle.Core, Version=3.3.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.Core.3.3.3\lib\net45\Castle.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="RFramework.Message, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\RFramework.Message.1.0.1.0\lib\net45\RFramework.Message.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="RFramework.ServiceClient, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\RFramework.ServiceClient.1.0.1.0\lib\net461\RFramework.ServiceClient.dll</HintPath>
+    <Reference Include="RFramework.Message, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RFramework.Message.1.0.2.0\lib\net45\RFramework.Message.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -76,19 +76,61 @@
     <Compile Include="TestBase.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\PublicConfig\providers.config">
+      <Link>providers.config</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
     <None Include="packages.config" />
+    <Content Include="Config\Provider.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\Services.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlMap.config">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\RFramework-1\RFramework\RFramework.ServiceClient\RFramework.ServiceClient.csproj">
+      <Project>{3430B7E8-F258-4460-9CFB-A37147349825}</Project>
+      <Name>RFramework.ServiceClient</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RCMS.Center.Domain\RCMS.Center.DomainService.csproj">
+      <Project>{B99DA986-AA03-4604-97B3-E092D3809638}</Project>
+      <Name>RCMS.Center.DomainService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RCMS.Center.Entity\RCMS.Center.Entity.csproj">
+      <Project>{d97b242d-c195-436a-a703-490e46e4ce7a}</Project>
+      <Name>RCMS.Center.Entity</Name>
+    </ProjectReference>
     <ProjectReference Include="..\RCMS.Center.Service.Message\RCMS.Center.Service.Message.csproj">
       <Project>{17E9A912-F417-45C0-B79A-95D4CC9D604A}</Project>
       <Name>RCMS.Center.Service.Message</Name>
     </ProjectReference>
+    <ProjectReference Include="..\RCMS.Public.DomainService\RCMS.Public.DomainService.csproj">
+      <Project>{0427F662-A896-49EC-9D19-694E87F5F638}</Project>
+      <Name>RCMS.Public.DomainService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RCMS.Public.Entity\RCMS.Public.Entity.csproj">
+      <Project>{724c5b4e-065f-4427-b7ec-5837fea417c3}</Project>
+      <Name>RCMS.Public.Entity</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\publicconfig\sqlmaps\T_App.xml">
+      <Link>SqlMaps\T_App.xml</Link>
+    </Content>
+    <Content Include="..\PublicConfig\SqlMaps\T_ProductCategory.xml">
+      <Link>SqlMaps\T_ProductCategory.xml</Link>
+    </Content>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
