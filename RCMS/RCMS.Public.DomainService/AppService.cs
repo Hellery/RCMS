@@ -1,7 +1,7 @@
 ﻿using RCMS.Public.DataAccess;
 using RCMS.Public.Entity;
-using RFramework.Infrastructure.Const;
-using RFramework.Infrastructure.RException;
+using RFramework.Const;
+using RFramework.RException;
 using System;
 using System.Collections.Generic;
 using System.Linq;

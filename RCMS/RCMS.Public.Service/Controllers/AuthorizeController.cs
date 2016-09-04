@@ -1,4 +1,5 @@
 ﻿using RCMS.Public.DomainService;
+using RFramework.Filter;
 using RFramework.Message;
 using System;
 using System.Collections.Generic;
@@ -10,6 +11,7 @@ using System.Web.Http.Cors;
 
 namespace RCMS.Public.Service.Controllers
 {
+    [NoneToken]
     [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class AuthorizeController : ApiController
     {

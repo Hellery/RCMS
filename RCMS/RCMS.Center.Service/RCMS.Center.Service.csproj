@@ -158,6 +158,9 @@
       <Link>SqlMaps\T_ProductCategory.xml</Link>
     </Content>
     <Content Include="Areas\HelpPage\HelpPage.css" />
+    <Content Include="Config\Provider.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Global.asax" />
     <Content Include="Provider.xml" />
     <Content Include="Web.config" />
@@ -235,7 +238,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Config\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>

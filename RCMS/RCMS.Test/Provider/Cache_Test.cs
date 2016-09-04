@@ -1,6 +1,5 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using RFramework.Infrastructure.Const;
 using RFramework.Cache.Interface;
 using RFramework.Provider;
 using RCMS.Public.Entity;
@@ -21,7 +20,7 @@ namespace RCMS.Test.Provider
         [TestMethod]
         public void CacheProvider_Test()
         {
-            string CacheKey = RFramework.Infrastructure.Const.CacheKey.GetApp(800002);
+            string CacheKey = RFramework.Const.CacheKey.GetApp(800002);
             CacheProvider.Add<T_App>(CacheKey, new T_App
             {
                 AppId=800002,
