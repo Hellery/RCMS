@@ -15,7 +15,7 @@ namespace RCMS.Center.Service
             config.RemoveXmlFormatter();
             config.EnableCors();
 
-          //  config.Filters.Add(new AuthTokenAttribute());
+            config.Filters.Add(new AuthTokenAttribute());
             // Web API 路由
             config.MapHttpAttributeRoutes();
 
