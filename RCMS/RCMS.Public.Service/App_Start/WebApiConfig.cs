@@ -17,7 +17,6 @@ namespace RCMS.Public.Service
 
             // Web API 配置和服务
             config.Filters.Add(new AuthTokenAttribute());
-       //     config.Filters.Add(new RExceptionAttribute());
 
             // Web API 路由
             config.MapHttpAttributeRoutes();

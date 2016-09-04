@@ -1,4 +1,5 @@
-﻿using RFramework.WebApi;
+﻿using RFramework.Filter;
+using RFramework.WebApi;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +14,8 @@ namespace RCMS.Center.Service
             // Web API 配置和服务
             config.RemoveXmlFormatter();
             config.EnableCors();
+
+            config.Filters.Add(new AuthTokenAttribute());
             // Web API 路由
             config.MapHttpAttributeRoutes();
 

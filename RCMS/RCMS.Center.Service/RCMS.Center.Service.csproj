@@ -61,12 +61,36 @@
       <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="RFramework.Cache, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RFramework.Cache.1.0.0.0\lib\net452\RFramework.Cache.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="RFramework.Const, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RFramework.Const.1.0.0.0\lib\net452\RFramework.Const.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="RFramework.Exception, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RFramework.Exception.1.0.0.0\lib\net452\RFramework.Exception.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="RFramework.Filter, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RFramework.Filter.1.0.0.0\lib\net452\RFramework.Filter.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="RFramework.Message, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\RFramework.Message.1.0.2.0\lib\net45\RFramework.Message.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="RFramework.Provider, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RFramework.Provider.1.0.0.0\lib\net452\RFramework.Provider.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Rocher.Infrastructure.MyBatis">
       <HintPath>..\Extend-Bin\Rocher.MyIBatis\Rocher.Infrastructure.MyBatis.dll</HintPath>
+    </Reference>
+    <Reference Include="StackExchange.Redis, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\StackExchange.Redis.1.1.603\lib\net46\StackExchange.Redis.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Net.Http" />
@@ -135,6 +159,7 @@
     </Content>
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Global.asax" />
+    <Content Include="Provider.xml" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
