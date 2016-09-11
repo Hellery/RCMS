@@ -9,6 +9,7 @@ using System.Web.Http.Cors;
 using RFramework.Message;
 using RCMS.Public.Service.Contract;
 using RFramework.Filter;
+using System.Web.Http.Description;
 
 namespace RCMS.Public.Service.Controllers
 {
@@ -20,6 +21,11 @@ namespace RCMS.Public.Service.Controllers
             Qiniu.Conf.Config.Init();
         }
 
+        /// <summary>
+        /// 七牛云存储访问获取token
+        /// </summary>
+        /// <returns></returns>
+        [ApiExplorerSettings(IgnoreApi = true)]
         [NoneToken]
         [HttpPost]
         [HttpGet]

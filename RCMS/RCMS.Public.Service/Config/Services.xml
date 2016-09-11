@@ -16,6 +16,9 @@
             <Action Code="Search" Name="Search" Description="商品搜索引擎"/>
           </Actions>
         </Controller>
+        <Controller Code="QiNiu" Name="QiNiu">
+          <Action Code="GetToken" Name="GetToken" Description="七牛云存储获取Token"/>
+        </Controller>
       </Controllers>
     </Service>
     <Service Code="T" Name="Center" Host="http://localhost:9001" Description="交易中心服务">
