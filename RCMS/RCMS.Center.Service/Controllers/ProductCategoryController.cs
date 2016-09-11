@@ -9,6 +9,7 @@ using RCMS.Center.Service.Message.Response.ProductCategory;
 using RFramework.Message;
 using RCMS.Center.DomainService;
 using System.Web.Http.Cors;
+using System.Web.Http.Description;
 
 namespace RCMS.Center.Service.Controllers
 {
@@ -19,7 +20,6 @@ namespace RCMS.Center.Service.Controllers
     public class ProductCategoryController : ApiController, IProductCategoryService
     {
         private static readonly ProductCategoryService service = new ProductCategoryService();
-
         /// <summary>
         /// 获取所有产品分类
         /// </summary>
