@@ -7,31 +7,31 @@ class ProductCategory {
         this.InitApp();
     }
     InitApp() {
-       this.treeSetting={
+        this.treeSetting = {
             treeId: 'tree_Category',
-                view: {
+            view: {
                 dblClickExpand: true,
-                    showLine: true,
-                        selectedMulti: false
+                showLine: true,
+                selectedMulti: false
             },
             edit: {
                 enable: true,
-                    showRemoveBtn: false,
-                        showRenameBtn: false,
-                            drag: { isMove: true, prev: true, inner: true, next: true }
+                showRemoveBtn: false,
+                showRenameBtn: false,
+                drag: { isMove: true, prev: true, inner: true, next: true }
             },
             data: {
                 key: {
                     Id: "Id",
-                        name: "CategoryName",
-                            title: "CategoryName",
-                                CategoryCode: "CategoryCode"
+                    name: "CategoryName",
+                    title: "CategoryName",
+                    CategoryCode: "CategoryCode"
                 },
                 simpleData: {
                     enable: true,
-                        idKey: "Id",
-                            pIdKey: "ParentId",
-                                rootPId: '1'
+                    idKey: "Id",
+                    pIdKey: "ParentId",
+                    rootPId: '1'
                 }
             },
             callback: {
@@ -71,11 +71,26 @@ class ProductCategory {
                     })
                 }
             }
-        },
+        };
         this.BindEvent();
+        this.InitTree();
     }
     BindEvent() {
 
+    }
+    InitTree() {
+        var that = this;
+        $.ajax({
+            url: '/ProductCategory/GetAll',
+            type: 'post',
+            dataType: 'json',
+            success: function (resp) {
+                $(resp.Body).each(function (i, item) {
+                    resp.Body[i].FCategoryCode = resp.Body[i].CategoryCode.substr(0, resp.Body[i].CategoryCode.lastIndexOf('-'));
+                });
+                $.fn.zTree.init($("#treeContainer"), that.treeSetting, resp.Body);
+            }
+        });
     }
 }
 

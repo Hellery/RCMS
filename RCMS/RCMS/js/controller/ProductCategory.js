@@ -80,10 +80,25 @@ var ProductCategory = (function () {
                     });
                 }
             }
-        },
-            this.BindEvent();
+        };
+        this.BindEvent();
+        this.InitTree();
     };
     ProductCategory.prototype.BindEvent = function () {
+    };
+    ProductCategory.prototype.InitTree = function () {
+        var that = this;
+        $.ajax({
+            url: '/ProductCategory/GetAll',
+            type: 'post',
+            dataType: 'json',
+            success: function (resp) {
+                $(resp.Body).each(function (i, item) {
+                    resp.Body[i].FCategoryCode = resp.Body[i].CategoryCode.substr(0, resp.Body[i].CategoryCode.lastIndexOf('-'));
+                });
+                $.fn.zTree.init($("#treeContainer"), that.treeSetting, resp.Body);
+            }
+        });
     };
     return ProductCategory;
 }());
