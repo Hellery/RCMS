@@ -30,15 +30,15 @@ namespace RCMS.Test.Provider
             });
             Assert.IsTrue(true);
 
-             CacheKey = RFramework.Const.CacheKey.GetApp(800008);
-            CacheProvider.Add<T_App>(CacheKey, new T_App
-            {
-                AppId = 800008,
-                AppSecret = "C2456C1B-FF7D-4688-B346-D242A50A6138",
-                AppName = "后台",
-                AppStatus = 1
-            });
-            Assert.IsTrue(true);
+            // CacheKey = RFramework.Const.CacheKey.GetApp(800008);
+            //CacheProvider.Add<T_App>(CacheKey, new T_App
+            //{
+            //    AppId = 800008,
+            //    AppSecret = "C2456C1B-FF7D-4688-B346-D242A50A6138",
+            //    AppName = "后台",
+            //    AppStatus = 1
+            //});
+            //Assert.IsTrue(true);
         }
     }
 }
