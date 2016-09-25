@@ -87,17 +87,18 @@ var ProductCategory = (function () {
     ProductCategory.prototype.BindEvent = function () {
     };
     ProductCategory.prototype.InitTree = function () {
+        ///通过agent.api访问。
+        var SubmitGetAllData = [];
         var that = this;
-        $.ajax({
-            url: '/ProductCategory/GetAll',
-            type: 'post',
-            dataType: 'json',
-            success: function (resp) {
+        Agent.Api("T.PC.GetAll", SubmitGetAllData, function (resp) {
+            if (resp.IsSuccess) {
                 $(resp.Body).each(function (i, item) {
                     resp.Body[i].FCategoryCode = resp.Body[i].CategoryCode.substr(0, resp.Body[i].CategoryCode.lastIndexOf('-'));
                 });
                 $.fn.zTree.init($("#treeContainer"), that.treeSetting, resp.Body);
             }
+        }, function (resp) {
+            layer.msg("error" + resp.Message);
         });
     };
     return ProductCategory;

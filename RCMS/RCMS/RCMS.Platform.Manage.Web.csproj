@@ -1030,6 +1030,7 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\AgentController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProductCategoryController.cs" />
     <Compile Include="Global.asax.cs">
@@ -1057,8 +1058,10 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\Agent\" />
   </ItemGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="js\Agent.ts" />
     <TypeScriptCompile Include="js\controller\ProductCategory.ts" />
     <TypeScriptCompile Include="Scripts\typings\artTemplate\artTemplate.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\avalon.d.ts" />

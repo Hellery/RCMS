@@ -41,7 +41,7 @@ class ProductCategory {
                     var $cId = $('#CategoryId');
                     var $cCode = $('#CurrentCode');
                     $cName.html(node.CategoryName);
-                    $cId.val(node.Id)
+                    $cId.val(node.Id);
                     $cCode.val(node.CategoryCode);
                     $("#cId").val(node.Id);
                     $.ajax({
@@ -79,17 +79,18 @@ class ProductCategory {
 
     }
     InitTree() {
+        ///通过agent.api访问。
+        let SubmitGetAllData = [];
         var that = this;
-        $.ajax({
-            url: '/ProductCategory/GetAll',
-            type: 'post',
-            dataType: 'json',
-            success: function (resp) {
+        Agent.Api("T.PC.GetAll", SubmitGetAllData , function (resp) {
+            if (resp.IsSuccess) {
                 $(resp.Body).each(function (i, item) {
                     resp.Body[i].FCategoryCode = resp.Body[i].CategoryCode.substr(0, resp.Body[i].CategoryCode.lastIndexOf('-'));
                 });
                 $.fn.zTree.init($("#treeContainer"), that.treeSetting, resp.Body);
             }
+        }, function (resp) {
+            layer.msg("error" + resp.Message);
         });
     }
 }
