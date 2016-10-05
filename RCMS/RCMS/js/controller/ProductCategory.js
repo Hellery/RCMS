@@ -91,7 +91,6 @@ var ProductCategory = (function () {
         var SubmitGetAllData = [];
         var that = this;
         Agent.Api("T.PC.GetAll", SubmitGetAllData, function (resp) {
-            console.log("enter");
             if (resp.IsSuccess) {
                 $(resp.Body.CategoryList).each(function (i, item) {
                     resp.Body.CategoryList[i].FCategoryCode = resp.Body.CategoryList[i].CategoryCode.substr(0, resp.Body.CategoryList[i].CategoryCode.lastIndexOf('-'));
@@ -100,7 +99,6 @@ var ProductCategory = (function () {
             }
         }, function (resp) {
             layer.msg("error" + resp.Message);
-            //  console.log(resp.Message);
         });
     };
     return ProductCategory;
@@ -116,3 +114,4 @@ var Category = (function () {
     return Category;
 }());
 var productCategory = new ProductCategory();
+//# sourceMappingURL=ProductCategory.js.map

@@ -117,10 +117,6 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\RFramework-1\RFramework\RFramework.ServiceClient\RFramework.ServiceClient.csproj">
-      <Project>{3430B7E8-F258-4460-9CFB-A37147349825}</Project>
-      <Name>RFramework.ServiceClient</Name>
-    </ProjectReference>
     <ProjectReference Include="..\RCMS.Center.Domain\RCMS.Center.DomainService.csproj">
       <Project>{B99DA986-AA03-4604-97B3-E092D3809638}</Project>
       <Name>RCMS.Center.DomainService</Name>
@@ -140,6 +136,10 @@
     <ProjectReference Include="..\RCMS.Public.Entity\RCMS.Public.Entity.csproj">
       <Project>{724c5b4e-065f-4427-b7ec-5837fea417c3}</Project>
       <Name>RCMS.Public.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RFramework.ServiceClient\RFramework.ServiceClient.csproj">
+      <Project>{3430b7e8-f258-4460-9cfb-a37147349825}</Project>
+      <Name>RFramework.ServiceClient</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

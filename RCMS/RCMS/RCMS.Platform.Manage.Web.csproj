@@ -1084,10 +1084,6 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\RFramework-1\RFramework\RFramework.ServiceClient\RFramework.ServiceClient.csproj">
-      <Project>{3430b7e8-f258-4460-9cfb-a37147349825}</Project>
-      <Name>RFramework.ServiceClient</Name>
-    </ProjectReference>
     <ProjectReference Include="..\RCMS.Center.Domain\RCMS.Center.DomainService.csproj">
       <Project>{B99DA986-AA03-4604-97B3-E092D3809638}</Project>
       <Name>RCMS.Center.DomainService</Name>
@@ -1099,6 +1095,10 @@
     <ProjectReference Include="..\RCMS.Center.Service.Message\RCMS.Center.Service.Message.csproj">
       <Project>{17E9A912-F417-45C0-B79A-95D4CC9D604A}</Project>
       <Name>RCMS.Center.Service.Message</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RFramework.ServiceClient\RFramework.ServiceClient.csproj">
+      <Project>{3430b7e8-f258-4460-9cfb-a37147349825}</Project>
+      <Name>RFramework.ServiceClient</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

@@ -18,3 +18,4 @@ var Agent = (function () {
     };
     return Agent;
 }());
+//# sourceMappingURL=Agent.js.map
