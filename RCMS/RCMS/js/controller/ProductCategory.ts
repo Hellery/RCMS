@@ -91,8 +91,8 @@ class ProductCategory {
                 $.fn.zTree.init($("#treeContainer"), that.treeSetting, resp.Body.CategoryList);
             }
         }, function (resp) {
-            //layer.msg("error" + resp.Message);
-            console.log(resp.Message);
+            layer.msg("error" + resp.Message);
+          //  console.log(resp.Message);
         });
     }
 }
