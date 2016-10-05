@@ -7,7 +7,7 @@ using RCMS.Public.Entity;
 namespace RCMS.Test.Provider
 {
     [TestClass]
-    public class Cache_Test : TestBase
+    public class Cache_Test// : TestBase
     {
         public CacheProvider CacheProvider
         {

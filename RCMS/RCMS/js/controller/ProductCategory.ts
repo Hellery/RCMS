@@ -44,14 +44,14 @@ class ProductCategory {
                     $cId.val(node.Id);
                     $cCode.val(node.CategoryCode);
                     $("#cId").val(node.Id);
-                    $.ajax({
-                        url: '/ProductCategory/GetAttrsById',
-                        type: 'Post',
-                        data: { CategoryCode: node.CategoryCode },
-                        success: function (result) {
-                            that.selectAttr.val(result.Body).trigger("change");
-                        }
-                    })
+                    //$.ajax({
+                    //    url: '/ProductCategory/GetAttrsById',
+                    //    type: 'Post',
+                    //    data: { CategoryCode: node.CategoryCode },
+                    //    success: function (result) {
+                    //        that.selectAttr.val(result.Body).trigger("change");
+                    //    }
+                    //})
                 },
                 beforeDrag: function () { },
                 onDrag: function () { },
@@ -66,9 +66,9 @@ class ProductCategory {
                         case "next": { MoveType = 2; break; }
                         case "inner": { MoveType = 3; break; }
                     }
-                    $.post('/ProductCategory/Move', { CategoryId: CategoryId, TargetCategoryCode: TargetCategoryCode, MoveType: MoveType }, function (resp) {
-                        layer.tips('分类移动成功！', 0.5);
-                    })
+                    //$.post('/ProductCategory/Move', { CategoryId: CategoryId, TargetCategoryCode: TargetCategoryCode, MoveType: MoveType }, function (resp) {
+                    //    layer.tips('分类移动成功！', 0.5);
+                    //})
                 }
             }
         };
@@ -82,17 +82,37 @@ class ProductCategory {
         ///通过agent.api访问。
         let SubmitGetAllData = [];
         var that = this;
-        Agent.Api("T.PC.GetAll", SubmitGetAllData , function (resp) {
+        Agent.Api("T.PC.GetAll", SubmitGetAllData, function (resp) {
+            console.log("enter");
             if (resp.IsSuccess) {
-                $(resp.Body).each(function (i, item) {
-                    resp.Body[i].FCategoryCode = resp.Body[i].CategoryCode.substr(0, resp.Body[i].CategoryCode.lastIndexOf('-'));
+                $(resp.Body.CategoryList).each(function (i, item) {
+                    resp.Body.CategoryList[i].FCategoryCode = resp.Body.CategoryList[i].CategoryCode.substr(0, resp.Body.CategoryList[i].CategoryCode.lastIndexOf('-'));
                 });
-                $.fn.zTree.init($("#treeContainer"), that.treeSetting, resp.Body);
+                $.fn.zTree.init($("#treeContainer"), that.treeSetting, resp.Body.CategoryList);
             }
         }, function (resp) {
-            layer.msg("error" + resp.Message);
+            //layer.msg("error" + resp.Message);
+            console.log(resp.Message);
         });
     }
+}
+
+class CategoryList {
+    CategoryList: Array<Category>
+
+
+}
+
+class Category {
+    CategoryCode: string;
+    CategoryLevel: number;
+    CategoryName: string;
+    CreateTime: Date;
+    Creator: number;
+    Id: number;
+    IsDelete: boolean;
+    ParentId: number;
+    SortId: number;
 }
 
 let productCategory: ProductCategory = new ProductCategory();
