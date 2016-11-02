@@ -27,7 +27,7 @@ namespace RCMS.Test.Provider
                 AppSecret= "88B2A59E-E1FB-4A0B-ABEB-485ACB316549",
                 AppName="后台",
                 AppStatus=1
-            });
+            },new TimeSpan(300,1,1,1));
             Assert.IsTrue(true);
 
             // CacheKey = RFramework.Const.CacheKey.GetApp(800008);

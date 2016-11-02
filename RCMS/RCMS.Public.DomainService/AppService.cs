@@ -30,7 +30,7 @@ namespace RCMS.Public.DomainService
             }
             string token = Guid.NewGuid().ToString("N");
             cacheKey = CacheKey.GetTokenKey(token);
-            TimeSpan expiry = new TimeSpan(2, 0, 0);
+            TimeSpan expiry = new TimeSpan(8888, 0, 0);
             CacheProvider.Add<T_App>(cacheKey, app, expiry);
             return token;
         }

@@ -9,6 +9,10 @@ namespace RCMS.Center.Service.Message.Response.ProductCategory
 {
     public class GetAllResponse
     {
+        public GetAllResponse()
+        {
+            CategoryList = new List<T_ProductCategory>();
+        }
         public IList<T_ProductCategory> CategoryList { get; set; }
     }
 }

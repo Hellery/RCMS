@@ -15,7 +15,7 @@
   <!--缓存策略-->
   <cacheModels>
     <cacheModel id="T_ProductCategory_EntityCache" implementation="MEMORY">
-      <flushInterval minutes="30"/>
+      <flushInterval minutes="1"/>
       <flushOnExecute statement="T_ProductCategory.Insert"/>
       <flushOnExecute statement="T_ProductCategory.Delete"/>
       <flushOnExecute statement="T_ProductCategory.Update"/>
