@@ -10,6 +10,7 @@ using RFramework.Message;
 using RCMS.Center.DomainService;
 using System.Web.Http.Cors;
 using System.Web.Http.Description;
+using RCMS.Center.Service.Message.Request.ProductCategory;
 
 namespace RCMS.Center.Service.Controllers
 {
@@ -35,6 +36,15 @@ namespace RCMS.Center.Service.Controllers
                 {
                     CategoryList = categoryList
                 }
+            };
+        }
+
+        [HttpPost]
+        public ResponseMessage Move(MoveCategoryRequest reqMsg)
+        {
+            return new RFramework.Message.ResponseMessage
+            {
+                Body= service.Move(reqMsg.CategoryId,reqMsg.TargetCategoryCode,reqMsg.MoveType)
             };
         }
     }

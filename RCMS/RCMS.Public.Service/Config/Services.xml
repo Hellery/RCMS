@@ -26,6 +26,7 @@
         <Controller Code="PC" Name="ProductCategory" Description="产品分类">
           <Actions>
             <Action Code="GetAll" Name="GetAll" Description="获取所有产品分类信息"/>
+            <Action Code="Move" Name="Move" Description="移动分类"/>
           </Actions>
         </Controller>
       </Controllers>

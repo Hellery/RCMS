@@ -4,7 +4,7 @@ var Agent = (function () {
     Agent.Api = function (fullCode, reqMsg, successCallBack, errorCallBack) {
         var reqMsgStr = JSON.stringify(reqMsg);
         var agentUrl = "/Agent/Api";
-        this.Post(agentUrl, { fullCode: fullCode, reqMsg: reqMsg }, successCallBack, errorCallBack);
+        this.Post(agentUrl, { fullCode: fullCode, reqMsg: reqMsgStr }, successCallBack, errorCallBack);
     };
     Agent.Post = function (url, data, successCallBack, errorCallBack) {
         $.post(url, data, function (resp) {

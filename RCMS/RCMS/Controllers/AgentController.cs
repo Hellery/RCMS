@@ -17,6 +17,7 @@ namespace RCMS.Controllers
         /// <returns></returns>
         [HttpPost]
         [AllowAnonymous]
+        [ValidateInput(false)]
         public String Api(String fullCode, String reqMsg)
         {
             return SendApi(fullCode, reqMsg);

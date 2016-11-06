@@ -75,9 +75,12 @@ var ProductCategory = (function () {
                             break;
                         }
                     }
-                    //$.post('/ProductCategory/Move', { CategoryId: CategoryId, TargetCategoryCode: TargetCategoryCode, MoveType: MoveType }, function (resp) {
-                    //    layer.tips('分类移动成功！', 0.5);
-                    //})
+                    Agent.Api("T.PC.Move", { CategoryId: CategoryId, TargetCategoryCode: TargetCategoryCode, MoveType: MoveType }, function () {
+                        layer.tips('分类移动成功！', 0.5);
+                    }, function (resp) {
+                        layer.tips('分类移动失败！' + resp.Message, 0.5);
+                        location.reload();
+                    });
                 }
             }
         };
@@ -88,9 +91,8 @@ var ProductCategory = (function () {
     };
     ProductCategory.prototype.InitTree = function () {
         ///通过agent.api访问。
-        var SubmitGetAllData = [];
         var that = this;
-        Agent.Api("T.PC.GetAll", SubmitGetAllData, function (resp) {
+        Agent.Api("T.PC.GetAll", {}, function (resp) {
             if (resp.IsSuccess) {
                 $(resp.Body.CategoryList).each(function (i, item) {
                     resp.Body.CategoryList[i].FCategoryCode = resp.Body.CategoryList[i].CategoryCode.substr(0, resp.Body.CategoryList[i].CategoryCode.lastIndexOf('-'));

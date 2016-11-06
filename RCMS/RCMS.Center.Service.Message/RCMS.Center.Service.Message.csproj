@@ -45,11 +45,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Request\ProductCategory\MoveCategoryRequest.cs" />
     <Compile Include="Response\ProductCategory\GetAllResponse.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Request\ProductCategory\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\RCMS.Center.Entity\RCMS.Center.Entity.csproj">
       <Project>{D97B242D-C195-436A-A703-490E46E4CE7A}</Project>

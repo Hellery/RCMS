@@ -66,9 +66,15 @@ class ProductCategory {
                         case "next": { MoveType = 2; break; }
                         case "inner": { MoveType = 3; break; }
                     }
-                    //$.post('/ProductCategory/Move', { CategoryId: CategoryId, TargetCategoryCode: TargetCategoryCode, MoveType: MoveType }, function (resp) {
-                    //    layer.tips('分类移动成功！', 0.5);
-                    //})
+
+                    Agent.Api("T.PC.Move",
+                        { CategoryId: CategoryId, TargetCategoryCode: TargetCategoryCode, MoveType: MoveType },
+                    () => {
+                        layer.tips('分类移动成功！', 0.5);
+                    }, (resp) => {
+                        layer.tips('分类移动失败！'+resp.Message, 0.5);
+                        location.reload();
+                    });
                 }
             }
         };
@@ -80,9 +86,8 @@ class ProductCategory {
     }
     InitTree() {
         ///通过agent.api访问。
-        let SubmitGetAllData = [];
         var that = this;
-        Agent.Api("T.PC.GetAll", SubmitGetAllData, function (resp) {
+        Agent.Api("T.PC.GetAll", {}, function (resp) {
             if (resp.IsSuccess) {
                 $(resp.Body.CategoryList).each(function (i, item) {
                     resp.Body.CategoryList[i].FCategoryCode = resp.Body.CategoryList[i].CategoryCode.substr(0, resp.Body.CategoryList[i].CategoryCode.lastIndexOf('-'));
@@ -97,8 +102,6 @@ class ProductCategory {
 
 class CategoryList {
     CategoryList: Array<Category>
-
-
 }
 
 class Category {
