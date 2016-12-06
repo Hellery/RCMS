@@ -14,7 +14,7 @@ using System.Web.Http.Description;
 namespace RCMS.Public.Service.Controllers
 {
     [EnableCors(origins: "*", headers: "*", methods: "*")]
-    public class QiNiuController : ApiController,IQiNiuService
+    public class QiNiuController : ApiController, IQiNiuService
     {
         static QiNiuController()
         {
@@ -33,8 +33,12 @@ namespace RCMS.Public.Service.Controllers
         {
             var policy = new PutPolicy("i4ta");
             string token = policy.Token();
-            return new RFramework.Message.ResponseMessage {
-                Body=new { uptoken=token}
+            return new RFramework.Message.ResponseMessage
+            {
+                Body = new
+                {
+                    uptoken = token
+                }
             };
         }
     }
