@@ -13,6 +13,6 @@ namespace RCMS.Center.Service.Message.Response.ProductCategory
         {
             CategoryList = new List<T_ProductCategory>();
         }
-        public IList<T_ProductCategory> CategoryList { get; set; }
+        public IList<T_ProductCategory> CategoryList { get; set; } 
     }
 }
