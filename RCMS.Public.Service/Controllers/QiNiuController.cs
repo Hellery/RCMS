@@ -22,7 +22,7 @@ namespace RCMS.Public.Service.Controllers
         }
 
         /// <summary>
-        /// 七牛云存储访问获取token
+        /// 七牛云存储访问获取token 
         /// </summary>
         /// <returns></returns>
         [ApiExplorerSettings(IgnoreApi = true)]
