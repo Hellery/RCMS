@@ -1025,6 +1025,7 @@
     <Content Include="js\plugins\zTree\js\jquery.ztree.exedit.min.js" />
     <Content Include="js\plugins\zTree\js\jquery.ztree.exhide.js" />
     <Content Include="js\plugins\zTree\js\jquery.ztree.exhide.min.js" />
+    <Content Include="js\vue.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.1.0.js" />
@@ -1039,6 +1040,7 @@
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\AgentController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ProductAttributeController.cs" />
     <Compile Include="Controllers\ProductCategoryController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -1055,6 +1057,7 @@
     <Content Include="Scripts\jquery-3.1.0.slim.min.map" />
     <Content Include="Scripts\jquery-3.1.0.min.map" />
     <Content Include="Views\ProductCategory\Index.cshtml" />
+    <Content Include="Views\ProductAttribute\Add.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

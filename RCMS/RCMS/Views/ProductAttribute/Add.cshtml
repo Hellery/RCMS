@@ -1,0 +1,63 @@
+﻿
+@{
+    ViewBag.Title = "新增参数";
+}
+
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="box box-default">
+            <div class="box-header">
+                <div class="box-title">
+                    参数信息
+                </div>
+            </div>
+            <div class="box-body">
+                <form class="form-horizontal" method="post">
+                    <div class="form-group">
+                        <label class="control-label col-md-4" for="AttributeName">
+                            参数名称
+                        </label>
+                        <div class="col-md-8">
+                            <input class="form-control" type="text" name="AttributeName" id="AttributeName" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-4" for="SortId">
+                            参数排序号
+                        </label>
+                        <div class="col-md-8">
+                            <input class="form-control" type="text" name="SortId" id="SortId" />
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <form class="form-horizontal" method="post">
+            <div class="box box-info">
+                <div class="box-header">
+                    <div class="box-title">
+                        参数选项
+                    </div>
+                    <div class="box-tools pull-right">
+                        <a  class="btn btn-flat btn-default" data-role="btn_addoption">+</a>
+                    </div>
+                </div>
+              
+                <div class="box-body">
+                    <div class="form-group">
+                        <label class="control-label col-md-4" for="AttributeOption">选项值</label>
+                        <div class="col-md-8">
+                            <input class="form-control" type="text" name="AttributeOption" id="AttributeOption" placeholder="请输入参数的选项值" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
